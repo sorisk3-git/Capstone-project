@@ -36,3 +36,6 @@ def index(request):
 @permission_classes([IsAuthenticated])
 def msg(request):
     return Response({"message": "This view is protected"})
+
+def test():
+    pass
