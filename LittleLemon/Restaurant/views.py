@@ -38,4 +38,5 @@ def msg(request):
     return Response({"message": "This view is protected"})
 
 def test():
+    print("merge conflict fixed")
     pass
