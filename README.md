@@ -104,13 +104,16 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Run database migrations
+# 4. Configure environment (optional — defaults work for SQLite)
+cp ../.env.example ../.env  # Edit if using MySQL
+
+# 5. Run database migrations
 python manage.py migrate
 
-# 5. Create a superuser (admin)
+# 6. Create a superuser (admin)
 python manage.py createsuperuser
 
-# 6. Start the development server
+# 7. Start the development server
 python manage.py runserver
 ```
 
@@ -130,16 +133,6 @@ Visit **http://localhost:8000** in your browser.
 | GET | `/message/` | Protected test endpoint | ✅ |
 
 ---
-
-## 🔐 Development Credentials
-
-> ⚠️ **For local development only** — change before deploying to production.
-
-| Role | Username | Email | Password |
-|------|----------|-------|----------|
-| Superadmin | `capstone` | `capstone@littlelemon.com` | `@project123!` |
-
-**API Token (pre-generated):** `64c325e7a2678b995780e75e598d0269be621704`
 
 ---
 
